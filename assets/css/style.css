@@ -1,0 +1,304 @@
+/* Ecriture */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E8E6D4;
+}
+
+
+.input-search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+ }
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+.banner h2 {
+    margin: 20px;
+    color: white;
+    font-size: 40px;
+    font-weight:  bold;
+    width:  350px;
+
+}
+.banner p {
+    margin: 20px;
+    color: white;
+    font-size: 18px;
+    width: 400px;
+    line-height: 1.5;
+}
+
+
+.nav-item {
+    list-style: none;
+    margin: 10px;
+    
+}
+.nav-item a {
+    text-decoration: none;
+    color: grey;
+    font-size: 18px;
+    font-weight:  bold;
+}
+.nav-item  a:hover {
+    color: orange
+}
+.btn-banner {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    
+}
+
+.banner {
+    
+    height: 400px;
+    border-radius: 20px;
+    background-image: url(../images/p2.webp);
+    background-size: cover;
+    background-position: center;
+    
+}
+.titre-recherche {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titre-recherche h2 {
+    margin: 0;
+}
+.titre-recherche input {
+    width: 500px;
+}
+.container-recipes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container article {
+    width: 300px;
+}
+/* article */
+.taille-photo {
+    width: 200px;
+    height: 120px;
+    border-radius: 15px;
+}
+.categories {
+    width: 20%;
+}
+.container {
+    width: 80%;
+}
+article {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form {
+    background-color: #AAB28A;
+    border-radius: 12px;
+    width: 500px;
+    min-height: 300px;
+    margin-left: auto;
+    padding: 20px;
+    margin-right: 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contact-form label {
+    width: 100%;
+    padding: 10px;
+  display: block;
+    margin-bottom: 5px;
+}
+.contact-form input, textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0 auto 15px;
+    border-radius:  6px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+ul {
+    list-style: none;
+   
+}
+.col-4 {
+  
+    padding:10px
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+.image-container {
+    position:relative;
+    display: inline-block;
+}
+
+.fa-heart  {
+    position: absolute;
+    top: 10px;
+    color: white;
+    right: 10px;
+    font-size: 25px;
+    z-index: 10;
+}
+
+
+
+/* Etapes de la recette */
+
+.recipe-step {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid grey;
+}
+/* Cercle avec le valider */
+.step-number {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+   
+}
+
+/* contenue de chaques étapes */
+
+.step-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+}
+.step-content h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    width: 180px;
+    min-width: 180px;
+}
+ .step-content p {
+  flex: 1;
+    margin: 0;
+ }
+
+ .ingredients {
+    transform: translateY(200px);
+    padding-left: 70px;
+ }
+
+ /* Titre suggestions recettes */
+
+ .titre-suggestions {
+    margin-top: 40px;
+    margin-bottom: 40px;
+ }
+
+ .fond-suggestions {
+    background-color: #AAB28A;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+ }
+
+
+ /*BANNER*/
+.newsletter {
+    background-color:#AAB28A;
+    color: white;
+    border-radius: 6px;
+    height: 80px;
+}
+.newsletter p {
+    height:0px;
+    text-align: center;
+    margin:0;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.newsletter input {
+
+    align-items: center;
+}
+.search-banner {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+
+}
+/* Carrousel */
+
+
+/* FOOTER */
+footer {
+    background-color: #596343;
+    color: #FFFFFF;
+    border-radius:  12px;
+    padding: 25 30px;
+    margin: 30px auto 0;
+    width: 90%;
+}
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:#E8E6D4;
+    text-decoration: underline;
+}
+
+
+footer .icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+footer .icone i {
+    color: #FFFFFF !important;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.col-3 {
+    width: auto;
+    padding: 10px;
+}
+footer p  {
+text-align: center;
+}
+.icone{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   width: 100%;
+   transform: translateY(-15px);
+}
