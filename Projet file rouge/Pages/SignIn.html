@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Lien bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+       <!-- lien fichier css  -->
+      <link rel="stylesheet" href="../assets/css/style.css"> 
+   
+      <!-- Lien fontawesome -->
+       <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+       
+    <title>S'inscrire</title>
+        
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipe.html">Recettes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="search.html">Recherche</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html">Contactez-nous</a>
+                        </li>
+    
+                    </ul>
+                    <a href="./connexion.html" class="btn btn-outline-success" type="submit">Se connecter</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<body>
+    <main>
+        <section>
+            <!-- Formulaire -->
+            <div class="mb-3" cl>
+                  <div class="inscription-container">
+                <form id="inscription-form" classe="formulaire">
+                    <h2> Inscription</h2>
+                    <fieldset class="inscription-fieldset">
+                        <legend>Informations personnelles</legend>
+                        <div>
+                            <label for="Nom">Nom :</label>
+                            <input type="text" name=" nom" id="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div> <label for="email">Email :</label>
+                            <input type="email" id="email" placeholder="Exemple@gmail.com" required>
+                        </div>
+                        <div class="form-group"> <label for="mdp">Mot de passe</label>
+                            <input type="password" id="mdp" placeholder="Votre mot de passe" required>
+                        </div>
+                    </fieldset>
+        
+        
+                    <fieldset class="inscription-fieldset">
+                        <legend>Informations supplémentaires</legend>
+                        <!-- Radio -->
+                        <div>
+                            <label>Genre :</label>
+                            <input type="radio" id="femme" name="genre" value="femme">
+                            <label for="femme">Femme</label>
+                            <input type="radio" id="homme" name="genre" value="homme">
+                            <label for="homme">Homme</label>
+                        </div>
+        
+        
+                        <!-- Pays -->
+                        <div>
+                            <label for="pays">Pays :</label>
+                            <select name="pays" id="pays">
+                                <option value="France">France</option>
+                                <option value="Espagne">Espagne</option>
+                                <option value="Angleterre">Angleterre</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <button type="submit">S'inscrire</button>
+                    <p> Vous avez déja un compte ? <a href="./connexion.html">se connecter</a> </p>
+                </form>
+            </div>
+        </div>
+        </section>
+    </main>
+     <footer> 
+
+      
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                   <ul>
+                        <li>présentations </li>
+                        <li>Professionels</li>
+                        <li>Magasins</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 ">
+                    <ul>
+                        <li>Webinaires</li>
+                        <li>Ateliers</li>
+                        <li>Rencontres locales</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <ul>
+                        <li>Nos Initiatives</li>
+                        <li>Engagement solidaire</li>
+                        <li>Communautés</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <ul>
+                        <li>Formulaire de contact</li>
+                        <li>Travailler avec nous</li>
+                        <li>Nous rendre visite</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+          <div class="icone">
+
+            <i class="fa-brands fa-facebook-f" ></i>
+            <i class="fa-brands fa-instagram" ></i>
+            <i class="fa-brands fa-twitter" ></i>
+        </div>
+
+    </footer>
+    <!-- Lien JS Bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/Js/user.js"></script> 
+</body>
+</html>
