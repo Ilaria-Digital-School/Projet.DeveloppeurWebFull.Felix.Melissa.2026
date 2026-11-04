@@ -12,10 +12,10 @@ class Utilisateur {
 
 
 function ajouterAdmin() {
-    let amdin = new Utilisateur("Admin", "admin@gmail.com", "admin123", "femme", "France", "admin");
+    let admin = new Utilisateur("Admin", "admin@gmail.com", "admin123", "femme", "France", "admin");
     let utilisateurs = JSON.parse(localStorage.getItem("utilisateurs")) || [];
     for (let i = 0; i < utilisateurs.length; i++) {
-        if (utilisateurs[i].email == amdin.email) return;
+        if (utilisateurs[i].email == admin.email) return;
     }
     utilisateurs.push(admin);
     localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
@@ -39,7 +39,7 @@ function sInscrire() {
 
         let utilisateur = new Utilisateur(nom, email, mdp, genre, pays, "client");
 
-        const utilisateurs = JSON.parse(localStorage.getItem("Utilisateurs")) || [];
+        const utilisateurs = JSON.parse(localStorage.getItem("utilisateurs")) || [];
         utilisateurs.push(utilisateur);
         localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
 
