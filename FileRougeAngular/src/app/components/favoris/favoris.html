@@ -1,0 +1,26 @@
+<section class="favoris">
+
+    <h2>Mes Recettes Favorites </h2>
+
+    @if (favorites.length > 0) {
+        <div class="container">
+            <div class="row">
+
+    @for(recipe of favorites; track recipe) {
+        <div class="col-12 col-sm-6 col-lg-3">
+    <article class="recipe-card">
+        <div class="image-container">
+        <img [src]="getRecipeImage(recipe)" [alt]="recipe" class="taille-photo">
+        <h3>{{recipe}}</h3>
+    </div>
+    </article>
+        </div>
+    }
+            </div>
+        </div>
+    } @else {
+    <p> Vous n'avez pas encore de recettes favoris</p>
+    }
+  
+</section>
+

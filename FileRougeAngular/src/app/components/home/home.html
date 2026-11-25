@@ -1,0 +1,240 @@
+
+<main>
+        <section class="banner">
+            <h2>Choisissez parmis<br> des milliers de<br>recettes</h2>
+
+            <p> Découvrez des recettes savoureuses pour toutes vos envies.</p>
+            <a href="./Pages/SignIn.html" class="btn-banner"> <i class="fa-light fa-right-from-bracket"></i> Inscrivez-vous dès aujourd'hui !</a>
+
+        </section>
+        <section class="recipes">
+            <div class="titre-recherche">
+            <h2 class="rebriques">Rebriques des recettes</h2>
+            <form (submit)="$event.preventDefault()">
+
+                <input id="searchInput" type="search" placeholder="Chercher une recette" (input)="searchText = $any($event.target).value" >
+                <button type="button" (click)="searchTerm = searchText.trim()">Go</button>
+            </form>
+            </div>
+
+            <div class="container-recipes">
+            <div class="categories">
+                <h3> Types de plat</h3>
+                <ul>
+                    <li>Apéritif et collations</li>
+                    <li>Recettes de pain gourmand</li>
+                    <li>Recettes de gâteauxs</li>
+                    <li>Bonbons et fondants</li>
+                    <li>Recettes plats mijotés</li>
+                    <li>Biscuits de NÖEL</li>
+                    <li>Recettes de cocktails</li>
+                    <li>Plats principaux</li>
+                    <li>Recettes de pâtes</li>
+
+                </ul>
+            </div>
+
+
+            <!-- Recettes -->
+            <div class="container">
+                <div class="row">
+                    @if (matchesSearch ('Tiramisu Original')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card"
+                        (click)="goToRecipe()" >
+                      
+                            <div class="image-container">
+                                <img src="assets/images/tiramisu.webp" class="img-fluid rounded" alt="Tiramisu Recette Original">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Tiramisu Recette Original') " [style.color]="isFavorite('Tiramisu Recette Original') ? 'red' : 'white'" style="cursor: pointer;"></i>
+            
+                                <h3> <strong>Tiramisu Original</strong> </h3>
+            
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 5.0(73) by Mélissa </p>
+                            </div>
+                        
+                        </article>
+                    </div>
+                }
+
+                     @if (matchesSearch ('Salade composée')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card" >
+                            <div class="image-container">
+                                <img src="assets/images/p4.web.webp" alt="Salade" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Salade composée') " [style.color]="isFavorite('Salade composée') ? 'red' : 'white'" style="cursor: pointer;"></i>
+                                <h3> <strong>Salade composée</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>3,0(94) by Danial Caleem</p>
+                            </div>
+                        </article>
+                    </div>
+                }
+                    
+                     @if (matchesSearch ('Cassoulet')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p5.jpeg" alt="Cassoulet" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Cassoulet') " [style.color]="isFavorite('Cassoulet') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Cassoulet</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 4,5(15,5) by Janet Smail </p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+
+                     @if (matchesSearch ('Epinard Tomate Cerise')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article  class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p6.jpeg" alt="épinard tomates cerises" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Epinard Tomate Cerise') " [style.color]="isFavorite('Epinard Tomate Cerise') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Epinard Tomates Cerises</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 5,0(524) by Aleaxa Darchest </p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+
+                     @if (matchesSearch ('Poisson Sauce Curry')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p7.webp" alt="Poisson sauce curie" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Poisson Sauce Curry') " [style.color]="isFavorite('Poisson Sauce Curry') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Poisson Sauce Curry</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 4,6(404) by Ben Kalier </p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+
+                     @if (matchesSearch ('Salade De thon')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p8.png" alt="Salade de thon" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Salade De Thon') " [style.color]="isFavorite('Salade De Thon') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Salade De Thon</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 3,9(629) by Janet Smail </p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+
+                     @if (matchesSearch ('Gratin de pomme de terre')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p9.jpeg" alt="Gratin pomme de terre" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Gratin De Pomme De Terre') " [style.color]="isFavorite('Gratin De Pomme De Terre') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Gratin de pomme de terre</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 3,6(149) by Theresa Samuel</p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+                    
+                     @if (matchesSearch ('Salade de pêches')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p10.jpeg" alt="Salade de pêche" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Salade De Pêches') " [style.color]="isFavorite('Salade De Pêches') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Salade de Pêches</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 2,9(309) by Adam Brown </p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+                  
+                     @if (matchesSearch ('Chicken Potetoes')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p14.jpeg" alt="Chicken potetoes" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Chicken Potetoes') " [style.color]="isFavorite('Chicken Potetoeq') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Chiken and Potetoes</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 3,5(124) by Thomas Hailer</p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+
+                     @if (matchesSearch ('Salade Turc')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article  class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p11.jpeg" alt="Salade turc" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Salade Turc') " [style.color]="isFavorite('Salade Turc') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Salade Turc</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 4,0(84) by Thomas Hailer </p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+                    
+                     @if (matchesSearch ('Pancake')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p12.jpeg" alt="Pancake" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Pancake') " [style.color]="isFavorite('Pancake') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Pancake Original</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 2,9(311) by Thomas Hailer</p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+ 
+                     @if (matchesSearch ('Pizza')){
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="recipe-card">
+                            <div class="image-container">
+                                <img src="assets/images/p13.png" alt="Pizza" class="taille-photo">
+                                <i class="fa-solid fa-heart" (click)="toggleFavorite('Pizza') " [style.color]="isFavorite('Pizza') ? 'red' : 'white'" style="cursor: pointer;"></i>
+
+                                <h3> <strong>Pizza</strong> </h3>
+
+                                <p><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 4,4(68) by Thomas Hailer</p>
+                            </div>
+
+                        </article>
+                    </div>
+                }
+
+                </div>
+            </div>
+            </div>
+            
+            
+        </section>
+
+    </main>
